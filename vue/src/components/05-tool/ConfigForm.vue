@@ -36,19 +36,6 @@
                 <button type="button" class="btn btn-success btn-sm me-2" @click="applyConfigLocal">
                   <i class="bi bi-arrow-up-square"></i> Apply
                 </button>
-                <button type="button" class="btn btn-primary btn-sm me-2" @click="promptRenameConfig">
-                  <i class="bi bi-pencil"></i> Rename
-                </button>
-                <button @click="cloneConfigLocal" class="btn btn-primary btn-sm me-2">
-                  <i class="bi bi-copy"></i> Clone
-                </button>
-                <button type="button" class="btn btn-primary btn-sm me-2" @click="triggerFileInput">
-                  <i class="bi bi-box-arrow-in-down-right"></i> Import
-                </button>
-                <input type="file" ref="fileInput" style="display: none" @change="importConfig" />
-                <button type="button" class="btn btn-danger btn-sm me-2" @click="deleteConfigLocal">
-                  <i class="bi bi-x-square"></i> Delete
-                </button>
               </div>
 
               <!-- Middle aligned buttons -->
@@ -58,9 +45,6 @@
 
               <!-- Right aligned buttons -->
               <div class="col-auto">
-                <button type="button" class="btn btn-secondary btn-sm" @click="resetConfig">
-                  <i class="bi bi-arrow-clockwise"></i> Reset to Default
-                </button>
               </div>
             </div>
           </div>
@@ -118,12 +102,6 @@
 
                   <!-- Buttons on the right -->
                   <div>
-                    <button @click="saveConfig" type="button" class="btn btn-success btn-sm me-2">
-                      <i class="bi bi-floppy"></i> Save
-                    </button>
-                    <button @click="exportConfig" class="btn btn-primary btn-sm me-2">
-                      <i class="bi bi-box-arrow-up-right"></i> Export
-                    </button>
                   </div>
 
                 </div>
@@ -136,10 +114,6 @@
                     <input type="text" class="form-control" id="dvwaUrl" v-model="config.DVWAURL" />
                   </div>
                   <div class="mb-3">
-                    <label for="bankUrl" class="form-label">Bank URL</label>
-                    <input type="text" class="form-control" id="bankUrl" v-model="config.BANKURL" />
-                  </div>
-                  <div class="mb-3">
                     <label for="juiceShopUrl" class="form-label">Juice Shop URL</label>
                     <input type="text" class="form-control" id="juiceShopUrl" v-model="config.JUICESHOPURL" />
                   </div>
@@ -148,8 +122,8 @@
                     <input type="text" class="form-control" id="petstoreUrl" v-model="config.PETSTOREURL" />
                   </div>
                   <div class="mb-3">
-                    <label for="speedtestUrl" class="form-label">Speedtest URL</label>
-                    <input type="text" class="form-control" id="speedtestUrl" v-model="config.SPEEDTESTURL" />
+                    <label for="bankUrl" class="form-label">Bank URL</label>
+                    <input type="text" class="form-control" id="bankUrl" v-model="config.BANKURL" />
                   </div>
                 </div>
 
